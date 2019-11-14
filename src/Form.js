@@ -18,18 +18,29 @@ const UserForms = ({ values, errors, touched, status }) => {
                <Field 
                     type="text"
                     name="name"
-                    placeholder="name" />
-
+                    placeholder="Name" />
+                        {touched.name && errors.name && (
+                    <p className="errors">
+                        {errors.name}</p>
+                )}
                 <Field 
                     type="text"
                     name="email"
-                    placeholder="email" />
-
+                    placeholder="Email" />
+                {touched.email && errors.email && (
+                    <p className="errors">
+                        {errors.email}
+                    </p>
+                )}
                 <Field 
                     type="text"
                     name="password"
-                    placeholder="password" /> 
-
+                    placeholder="Password" /> 
+                {touched.password && errors.password && (
+                    <p className="errors">
+                        {errors.password}
+                    </p>
+                )}
                     {/* CHECKBOX */}
                 <label className="checkbox-container">
                     Terms of Service
@@ -43,8 +54,8 @@ const UserForms = ({ values, errors, touched, status }) => {
                 <Field as="textarea"
                     type="text"
                     name="notes" 
-                    placeholder="notes" />
-                <button>Submit</button>
+                    placeholder="Notes" />
+                <button type="submit">Submit</button>
             </Form>
             {users.map(user => (
                 <ul key={user.id}>
@@ -66,9 +77,9 @@ const UserForms = ({ values, errors, touched, status }) => {
             };
         },
         validationSchema: Yup.object().shape({
-            name: Yup.string().required(),
-            email: Yup.string().required(),
-            password: Yup.string().required()
+            name: Yup.string().required('Required Field'),
+            email: Yup.string().required('Required Field'),
+            password: Yup.string().required('Required Field')
         }),
         handleSubmit(values, {setStatus}) {
             axios
