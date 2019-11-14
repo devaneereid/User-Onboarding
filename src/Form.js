@@ -2,7 +2,14 @@ import React, {useState, useEffect}from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import styled from "styled-components";
 
+const UserStyles = styled.div`
+    background: blueviolet;
+    padding: 40px;
+    border-radius: 20px;
+    opacity: 0.9;
+`;
 
 const UserForms = ({ values, errors, touched, status }) => {
     const [users, setUsers] = useState([]);
@@ -13,6 +20,7 @@ const UserForms = ({ values, errors, touched, status }) => {
         }, [status]);
     
     return (
+    <UserStyles>
         <div className="user-form">
             <Form>
                <Field 
@@ -44,12 +52,11 @@ const UserForms = ({ values, errors, touched, status }) => {
                     {/* CHECKBOX */}
                 <label className="checkbox-container">
                     Terms of Service
-                </label>
                 <Field 
                     type="checkbox"
                     name="terms"
                     checked={values.terms} />
-
+            </label>
                     {/* BUTTON */}
                 <Field as="textarea"
                     type="text"
@@ -65,6 +72,7 @@ const UserForms = ({ values, errors, touched, status }) => {
                 </ul>
             ))}
         </div>
+     </UserStyles>
     )
 }
     const FormikUserForms = withFormik({
