@@ -31,7 +31,7 @@ const UserForms = ({ values, errors, touched, status }) => {
                     <p className="errors">
                         {errors.name}</p>
                 )}
-                <Field 
+                <br /><Field 
                     type="text"
                     name="email"
                     placeholder="Email" />
@@ -40,7 +40,7 @@ const UserForms = ({ values, errors, touched, status }) => {
                         {errors.email}
                     </p>
                 )}
-                <Field 
+                <br /><Field 
                     type="text"
                     name="password"
                     placeholder="Password" /> 
@@ -50,7 +50,7 @@ const UserForms = ({ values, errors, touched, status }) => {
                     </p>
                 )}
                     {/* CHECKBOX */}
-                <label className="checkbox-container">
+                    <br /> <label className="checkbox-container">
                     Terms of Service
                 <Field 
                     type="checkbox"
@@ -58,7 +58,7 @@ const UserForms = ({ values, errors, touched, status }) => {
                     checked={values.terms} />
             </label>
                     {/* BUTTON */}
-                <Field as="textarea"
+                    <br />  <Field as="textarea"
                     type="text"
                     name="notes" 
                     placeholder="Notes" />
