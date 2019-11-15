@@ -30,8 +30,8 @@ const UserForms = ({ values, errors, touched, status }) => {
                         {touched.name && errors.name && (
                     <p className="errors">
                         {errors.name}</p>
-                )}
-                <br /><Field 
+                )}<br />
+                <Field 
                     type="text"
                     name="email"
                     placeholder="Email" />
@@ -39,8 +39,8 @@ const UserForms = ({ values, errors, touched, status }) => {
                     <p className="errors">
                         {errors.email}
                     </p>
-                )}
-                <br /><Field 
+                )} <br />
+                <Field 
                     type="text"
                     name="password"
                     placeholder="Password" /> 
@@ -57,11 +57,12 @@ const UserForms = ({ values, errors, touched, status }) => {
                     name="terms"
                     checked={values.terms} />
             </label>
-                    {/* BUTTON */}
-                    <br />  <Field as="textarea"
+                    <br />  
+                    <Field as="textarea"
                     type="text"
                     name="notes" 
                     placeholder="Notes" />
+                     {/* BUTTON */}
                 <button type="submit">Submit</button>
             </Form>
             {users.map(user => (
