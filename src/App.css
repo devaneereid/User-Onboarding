@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+body {
+  color: white;
+  background: aqua;
+  padding: 15px;
+}
+input, textarea {
+  padding: 20px;
+  font-size: 1.4rem;
+  display: block;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.user-form {
+  width: 400px;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+input.errors {
+  color: red;
+}
+.checkbox-container{
+  display: block;
+  padding-left: 20px;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.App h1 {
+  color: black;
+  padding: 20px;
+  font-style: oblique;
+}
+button {
+  color: white;
+  width: 200px;
+  padding: 30px;
+  background-color: darkblue;
+  margin:40px;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  border: 1px solid aqua;
+  font-weight: bold;
+}
+#root > div > div > div > form > textarea {
+  height: 200px;
+}
